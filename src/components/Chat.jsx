@@ -1,6 +1,16 @@
+import { useState } from 'react';
 import './Chat.css'
 
 function Chat() {
+
+    const [msg, setMsg] = useState();
+
+    function handleClick(e){
+        e.preventDefault();
+        console.log('click');
+    }
+
+
     return(
         <div>
             <h1>Chat Bot</h1>
@@ -12,7 +22,7 @@ function Chat() {
             </div>
             <form className='form'>
                 <input className='msg' id="msg" placeholder='Message'></input>
-                <button className='btn'>Envoyer</button>
+                <button className='btn' onClick={handleClick}>Envoyer</button>
             </form>
         </div>
     )
