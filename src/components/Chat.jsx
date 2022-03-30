@@ -3,11 +3,15 @@ import './Chat.css'
 
 function Chat() {
 
-    const [msg, setMsg] = useState();
+    const [msg, setMsg] = useState('');
 
     function handleClick(e){
         e.preventDefault();
-        console.log('click');
+        console.log(msg);
+    }
+
+    function handleChange(e){
+        setMsg(e.target.value);
     }
 
 
@@ -21,7 +25,7 @@ function Chat() {
                 </div>
             </div>
             <form className='form'>
-                <input className='msg' id="msg" placeholder='Message'></input>
+                <input className='msg' id="msg" placeholder='Message' onChange={handleChange}></input>
                 <button className='btn' onClick={handleClick}>Envoyer</button>
             </form>
         </div>
