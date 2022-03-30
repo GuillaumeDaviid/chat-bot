@@ -1,0 +1,25 @@
+.chat_bot {
+    margin-left: 10vw;
+    border: 1px solid grey;
+    width: 80vw;
+    height: 50vh;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.msg {
+    width: 75vw;
+}
+
+.btn {
+    color: white;
+    background-color: #008CBA;
+    width: 5vw;
+    border-color: #008CBA;
+}
