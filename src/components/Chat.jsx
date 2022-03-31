@@ -19,13 +19,13 @@ function Chat() {
 
     function msgBot(newMsg) {
         if (newMsg === "Bonjour"){
-            return (<p>Bonjour</p>)
+            return (<p className='chat_bot-msg'>Bonjour</p>)
         }
         else if (newMsg === "!help"){
-            return (<p>Voici une liste de commande possible</p>)
+            return (<p className='chat_bot-msg'>Voici une liste de commande possible</p>)
         }
         else {
-            return (<p>Je n'est pas compris ton dernier message</p>)
+            return (<p className='chat_bot-msg'>Je n'est pas compris ton dernier message</p>)
         }
     }
 
@@ -34,10 +34,10 @@ function Chat() {
     }
 
     const listMsg = countMsg > 0 ?
-    (newMsg.map((newMsg) => <div className='chat_bot_content-msg'><h2>Moi :</h2><p key={newMsg.key}>{newMsg}</p>
-    <h2>Bot :</h2> {msgBot(newMsg)}</div>))
+    (newMsg.map((newMsg) => <div className='chat_bot_content-msg'><h2 className='chat_bot-msg'>Moi :</h2><p className='chat_bot-msg' key={newMsg.key}>{newMsg}</p>
+    <h2 className='chat_bot-msg'>Bot :</h2> {msgBot(newMsg)}</div>))
  : (<p></p>)
- 
+
     return(
         <div>
             <h1>Chat Bot</h1>

@@ -4,6 +4,7 @@
     border: 1px solid grey;
     width: 80vw;
     height: 50vh;
+    overflow: scroll;
 }
 
 .chat_bot_content-msg {
