@@ -17,19 +17,27 @@ function Chat() {
         setMsg('');
     }
 
+    function msgBot(newMsg) {
+        if (newMsg === "Bonjour"){
+            return (<p>Bonjour</p>)
+        }
+        else if (newMsg === "!help"){
+            return (<p>Voici une liste de commande possible</p>)
+        }
+        else {
+            return (<p>Je n'est pas compris ton dernier message</p>)
+        }
+    }
+
     function handleChange(e){
         setMsg(e.target.value);
     }
 
-/*
-                {countMsg > 0 ?
-                    (newMsg.map((newMsg) => <div className='chat_bot_content-msg'><h2>Moi :</h2><p>{newMsg}</p></div>))
-                 : (<p></p>)}*/
-
-                 /*{countMsg > 0 ?
-                     (<div className='chat_bot_content-msg'><h2>Moi :</h2><p>{newMsg[0]}</p></div>)
-                 : (<p></p>)}*/
-
+    const listMsg = countMsg > 0 ?
+    (newMsg.map((newMsg) => <div className='chat_bot_content-msg'><h2>Moi :</h2><p key={newMsg.key}>{newMsg}</p>
+    <h2>Bot :</h2> {msgBot(newMsg)}</div>))
+ : (<p></p>)
+ 
     return(
         <div>
             <h1>Chat Bot</h1>
@@ -38,9 +46,7 @@ function Chat() {
                 <h2 className='chat_bot-msg'>Bot :</h2>
                 <p className='chat_bot-msg'>Bonjour, Je suis un bot codé en React.js</p>
                 </div>
-                {countMsg > 0 ?
-                    (newMsg.map((newMsg) => <div className='chat_bot_content-msg'><h2>Moi :</h2><p key={newMsg.key}>{newMsg}</p></div>))
-                 : (<p></p>)}
+                {listMsg}
                 
                 
             </div>
