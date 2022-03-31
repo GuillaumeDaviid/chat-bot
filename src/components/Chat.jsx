@@ -11,9 +11,6 @@ function Chat() {
         e.preventDefault();
         setCountMsg(countMsg + 1);
         setNewMsg(newMsg.concat(msg))
-        console.log(countMsg);
-        console.log(msg);
-        console.log(newMsg);
         setMsg('');
     }
 
@@ -51,7 +48,7 @@ function Chat() {
                 
             </div>
             <form className='form'>
-                <input className='msg' id="msg" placeholder='Message' onChange={handleChange}></input>
+                <input className='msg' id="msg" placeholder='Message'  value={msg} onChange={handleChange}></input>
                 <button className='btn' onClick={handleClick}>Envoyer</button>
             </form>
         </div>
