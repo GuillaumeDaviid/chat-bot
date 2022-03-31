@@ -26,6 +26,10 @@ function Chat() {
                     (newMsg.map((newMsg) => <div className='chat_bot_content-msg'><h2>Moi :</h2><p>{newMsg}</p></div>))
                  : (<p></p>)}*/
 
+                 /*{countMsg > 0 ?
+                     (<div className='chat_bot_content-msg'><h2>Moi :</h2><p>{newMsg[0]}</p></div>)
+                 : (<p></p>)}*/
+
     return(
         <div>
             <h1>Chat Bot</h1>
@@ -35,7 +39,7 @@ function Chat() {
                 <p className='chat_bot-msg'>Bonjour, Je suis un bot codé en React.js</p>
                 </div>
                 {countMsg > 0 ?
-                     (<div className='chat_bot_content-msg'><h2>Moi :</h2><p>{newMsg}</p></div>)
+                    (newMsg.map((newMsg) => <div className='chat_bot_content-msg'><h2>Moi :</h2><p key={newMsg.key}>{newMsg}</p></div>))
                  : (<p></p>)}
                 
                 
