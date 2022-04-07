@@ -1,3 +1,3 @@
 # chat-bot
 
-Lien : https://GuillaumeDaviid.github.io/chat-bot
+Intéragissez avec ce chat Bot : [Chat Bot](https://GuillaumeDaviid.github.io/chat-bot).
