@@ -38,3 +38,8 @@
     width: 5vw;
     border-color: #008CBA;
 }
+
+a {
+    text-decoration: none;
+    color: #008CBA;
+}
