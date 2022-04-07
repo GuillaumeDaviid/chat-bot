@@ -15,10 +15,10 @@ function Chat() {
     }
 
     function msgBot(newMsg) {
-        if (newMsg === "Bonjour"){
+        if (newMsg.toLowerCase() === "bonjour"){
             return (<p className='chat_bot-msg'>Bonjour</p>)
         }
-        else if (newMsg === "!help"){
+        else if (newMsg.toLowerCase() === "!help"){
             return (<p className='chat_bot-msg'>Voici une liste de commande possible</p>)
         }
         else {
