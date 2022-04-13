@@ -2,7 +2,7 @@ export function msgBot(newMsg) {
         if (newMsg.toLowerCase() === "bonjour"){
             return (<p className='chat_bot-msg'>Bonjour !</p>)
         }
-        else if (newMsg.toLowerCase() === "!help"){
+        else if (newMsg.toLowerCase() === "!help" || newMsg.toLowerCase() === "!aide" || newMsg.toLowerCase() === "aide"){
             return (<p className='chat_bot-msg'>Voici une liste de commande possible : 
             <br/> - !help 
             <br/> - !freelance</p>)
